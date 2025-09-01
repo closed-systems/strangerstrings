@@ -254,7 +254,7 @@ This implementation produces scoring results compatible with the Java implementa
 ## Future Ideas
 
 
-- I could nitpick the corpus that the Ghidra team used to make the dataset but I can't think of anything better with any baseline of truth so I stick with theirs. As noted in https://github.com/NationalSecurityAgency/ghidra/issues/2106 it's a bit to adapt or extend their model but with a good idea of finding the wheat and chaffe for a training set a good multilingual approach could likely be found (I'm looking at you stats nerds).
+- I could nitpick the corpus that the Ghidra team used to make the dataset but I can't think of anything better with any baseline of truth so I stick with theirs. As noted in https://github.com/NationalSecurityAgency/ghidra/issues/2106 it's a bit tricky to adapt or extend their model but with a good idea of finding the wheat and chaffe for a training set a good multilingual approach could likely be found (I'm looking at you stats nerds).
 - it could benefit in a re-write in Rust
 - Multilanguage is definitely a gap, as is base64.
 - If it was going to be really fancy it could examine the binary to determine the base and look for pointers as string offsets (for languages without C strings)
