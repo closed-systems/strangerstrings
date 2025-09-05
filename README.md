@@ -1,5 +1,5 @@
-# StrangerStrings
-![Stranger Strings](strangerstrings.png)
+# Stranger Strings
+![Stranger Strings](stranger-strings.png)
 
 
 A TypeScript module for extracting human-readable strings from binary files and determining which are most likely to be useful for human analysts. This implementation is compatible with the Ghidra string analysis algorithm and uses trigram-based scoring to filter out random character sequences while preserving meaningful strings.
@@ -22,7 +22,7 @@ I'm not going over 9600 failed strings to find FN, but spot checking was all str
 $ strings ./tasmota-UK.bin|wc -l
    12695
 
-$ strangerstrings -v ./tasmota-UK.bin |head -n 20
+$ stranger-strings -v ./tasmota-UK.bin |head -n 20
 Loading model: ./StringModel.sng
 Model type: lowercase, Lowercase: true
 Analyzing file: ./tasmota-UK.bin
@@ -55,23 +55,28 @@ Summary:
   Acceptance rate: 12.5%
 ```
 
-
-## Installation
+## Just use it
 
 ```bash
-npm install strangerstrings
+npx stranger-strings --help
+```
+
+## Installation in a project
+
+```bash
+npm install stranger-strings
 ```
 
 or with pnpm:
 
 ```bash
-pnpm add strangerstrings
+pnpm add stranger-strings
 ```
 
 ## Quick Start
 
 ```typescript
-import { StrangerStrings } from 'strangerstrings';
+import { StrangerStrings } from 'stranger-strings';
 import * as fs from 'fs';
 
 // Initialize analyzer with model
@@ -158,7 +163,7 @@ const strings = analyzer.extractStringsFromBinary(binaryData, 4);
 ### Convenience Functions
 
 ```typescript
-import { analyzeStringsWithModel, analyzeBinaryWithModel } from 'strangerstrings';
+import { analyzeStringsWithModel, analyzeBinaryWithModel } from 'stranger-strings';
 
 // Quick analysis without creating class instance
 const results = await analyzeStringsWithModel(

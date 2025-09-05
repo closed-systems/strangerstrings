@@ -1,5 +1,5 @@
 {
-  "name": "strangerstrings",
+  "name": "stranger-strings",
   "version": "1.0.0",
   "description": "A little tool to filter the stranger strings from a binary so you can analyze the good ones",
   "main": "dist/cli.js",
@@ -10,15 +10,15 @@
     "reverse engineering",
     "firmware analysis"
   ],
-  "homepage": "https://github.com/closed-systems/strangerstrings#readme",
-  "license":"Apache-2.0",
+  "homepage": "https://github.com/closed-systems/stranger-strings#readme",
+  "license": "Apache-2.0",
   "funding": "if you have a feature request and an email address at a billion dollar company a donation receipt to https://www.thesmithfamily.com.au will be anticipated.",
   "bin": {
     "strangerstrings": "dist/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/closed-systems/strangerstrings.git"
+    "url": "git+https://github.com/closed-systems/stranger-strings.git"
   },
   "scripts": {
     "build": "tsc",
@@ -27,9 +27,7 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "kxyne",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "@types/node": "^24.3.0",

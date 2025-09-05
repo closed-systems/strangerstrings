@@ -18,7 +18,7 @@ interface CLIOptions {
 }
 
 program
-  .name('strangerstrings')
+  .name('stranger-strings')
   .description('Extract and analyze meaningful strings from binary files using trigram scoring')
   .version('1.0.0')
   .addHelpText('before', () => {
