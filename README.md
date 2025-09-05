@@ -1,5 +1,5 @@
 # Stranger Strings
-![Stranger Strings](stranger-strings.png)
+![Stranger Strings](strangerstrings.png)
 
 
 A TypeScript module for extracting human-readable strings from binary files and determining which are most likely to be useful for human analysts. This implementation is compatible with the Ghidra string analysis algorithm and uses trigram-based scoring to filter out random character sequences while preserving meaningful strings.
@@ -22,7 +22,7 @@ I'm not going over 9600 failed strings to find FN, but spot checking was all str
 $ strings ./tasmota-UK.bin|wc -l
    12695
 
-$ stranger-strings -v ./tasmota-UK.bin |head -n 20
+$ strangerstrings -v ./tasmota-UK.bin |head -n 20
 Loading model: ./StringModel.sng
 Model type: lowercase, Lowercase: true
 Analyzing file: ./tasmota-UK.bin
@@ -55,28 +55,33 @@ Summary:
   Acceptance rate: 12.5%
 ```
 
-## Just use it
+## Just use it as a CLI app
 
 ```bash
-npx stranger-strings --help
+npx closed-systems/strangerstrings --help
+```
+
+```bash
+npm install -g closed-systems/strangerstrings
+strangerstrings --help
 ```
 
 ## Installation in a project
 
 ```bash
-npm install stranger-strings
+npm install closed-systems/strangerstrings
 ```
 
 or with pnpm:
 
 ```bash
-pnpm add stranger-strings
+pnpm add closed-systems/strangerstrings
 ```
 
 ## Quick Start
 
 ```typescript
-import { StrangerStrings } from 'stranger-strings';
+import { StrangerStrings } from 'strangerstrings';
 import * as fs from 'fs';
 
 // Initialize analyzer with model
@@ -163,7 +168,7 @@ const strings = analyzer.extractStringsFromBinary(binaryData, 4);
 ### Convenience Functions
 
 ```typescript
-import { analyzeStringsWithModel, analyzeBinaryWithModel } from 'stranger-strings';
+import { analyzeStringsWithModel, analyzeBinaryWithModel } from 'strangerstrings';
 
 // Quick analysis without creating class instance
 const results = await analyzeStringsWithModel(
@@ -225,12 +230,6 @@ See the `examples/` directory for complete usage examples:
 
 - `basic-usage.ts` - Basic string analysis
 - `binary-analysis.ts` - Binary file processing
-
-```bash
-# Run examples
-npx ts-node examples/basic-usage.ts
-npx ts-node examples/binary-analysis.ts
-```
 
 ## Testing
 
