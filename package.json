@@ -1,7 +1,7 @@
 {
   "name": "strangerstrings",
   "version": "1.0.0",
-  "description": "",
+  "description": "A little tool to filter the stranger strings from a binary so you can analyze the good ones",
   "main": "index.js",
   "bin": {
     "strangerstrings": "dist/cli.js"
