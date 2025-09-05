@@ -2,9 +2,23 @@
   "name": "strangerstrings",
   "version": "1.0.0",
   "description": "A little tool to filter the stranger strings from a binary so you can analyze the good ones",
-  "main": "index.js",
+  "main": "dist/cli.js",
+  "keywords": [
+    "forensics",
+    "strings",
+    "malware",
+    "reverse engineering",
+    "firmware analysis"
+  ],
+  "homepage": "https://github.com/closed-systems/strangerstrings#readme",
+  "license":"Apache-2.0",
+  "funding": "if you have a feature request and an email address at a billion dollar company a donation receipt to https://www.thesmithfamily.com.au will be anticipated.",
   "bin": {
     "strangerstrings": "dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/closed-systems/strangerstrings.git"
   },
   "scripts": {
     "build": "tsc",
